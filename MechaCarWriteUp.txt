@@ -1,0 +1,62 @@
+##MPG Regression:
+
+
+Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+
+From our linear regression model, the r-squared value is 0.7149, which means that roughly 30% of all horsepower predictions will be correct when using this linear model. Compared to the Pearson correlation coefficient between Vehicle Weigth  and MPG.
+
+Is the slope of the linear model considered to be zero? Why or why not?
+In addition, the p-value of our linear regression analysis is 0.0776, which is much smaller than our assumed significance level of 0.05%. Therefore, we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero.
+
+Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+Although the relationship between both variables is statistically significant, this linear model is not ideal. According to the calculated r-squared value, using only Vehicle Weigth to predict MPG is roughly as accurate as guessing using a coin toss. In other words, the variability we observed within our MPG data must come from multiple sources of variance. To accurately predict future MPG observations, we need to use a more robust model.
+
+
+##Suspension Coil Summary:
+
+Does the current manufacturing data meet this design specification? Why or why not?
+
+Yes with Variance of '62.29356' it meets requirement for suspension coils must not exceed 100 pounds per inch.
+
+##Suspension Coil T-Test
+
+data:  Suspension$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+ 
+
+The p-value is above the assumed significance level. Therefore, we would state that there is not enough evidence to reject the null hypothesis and we can confirm our two samples are not statistically different.
+
+
+##Design Your Own Study
+
+
+Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis.
+Knowing what test should be used, what data should be collected? Hint: Look at the cheat sheetPreview the document for required variables.
+
+Finding the correlation between each elements.
+
+        vehicle length vehicle weight spoiler angle ground clearance         AWD         mpg
+vehicle length       1.00000000    -0.12271790    0.02577114      -0.31663112  0.08565668  0.60947984
+vehicle weight      -0.12271790     1.00000000   -0.11307851       0.08511338 -0.03698098  0.09068314
+spoiler angle        0.02577114    -0.11307851    1.00000000      -0.21112057 -0.09120266 -0.02083999
+ground clearance    -0.31663112     0.08511338   -0.21112057       1.00000000 -0.15214456  0.32874886
+AWD                  0.08565668    -0.03698098   -0.09120266      -0.15214456  1.00000000 -0.14166977
+mpg                  0.60947984     0.09068314   -0.02083999       0.32874886 -0.14166977  1.00000000
+
+Looking at our length and weigth, it appears that the length is negatively correlated with weight. In other words, as vehicle length increases, vehicle weigth decrease, however, it is very weak correlation.
+
+As spoiler angle degree is higher mpg keeps increasing hence it has negative correlation.
+
+The null-hypothesis of this test is that the population is normally distributed. Thus, if the p value is less than the chosen alpha level, then the null hypothesis is rejected and there is evidence that the data tested are not normally distributed. On the other hand, if the p value is greater than the chosen alpha level, then the null hypothesis that the data came from a normally distributed population can not be rejected (e.g., for an alpha level of .05, a data set with a p value of less than .05 rejects the null hypothesis that the data are from a normally distributed )
+
+
+
+
+
